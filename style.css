@@ -1,42 +1,81 @@
-/* * {
-    border: 1px solid black;
-  }    */
-
-
-
-  body {
- background-color: beige;
- margin: 0;
- background: linear-gradient(90deg, rgb(187, 238, 235) 0%, rgb(230, 245, 247) 35%, rgb(255, 255, 255) 100%);
-/* background-image: url("dot-net.png"); */
-
+* {
+    margin: 0;
+    padding: 0;
 }
 
- #vertBox {
-    min-height: 100vh;
-    margin-right: 70%;
-    /* margin-top: -100px */
-    display: flex;
-    flex-direction: column;
-/* justify-content: center;  */
-align-items: center;
-   /* margin-top: -100pt; */
-    /* margin-bottom: -50pt; */
-    background: linear-gradient(90deg, rgb(209, 55, 41) 0%, rgb(196, 80, 80) 35%, rgb(228, 163, 163) 100%);
-    /* position: -webkit-sticky; */
+html, body, .Container {
+    height: 100%;
 }
-  .circleBase {
+
+.Container:before {
+    content: '';
+    height: 100%;
+    float: left;
+}
+
+
+.Content {
+    position: relative;
+    z-index: 1;
+}
+
+.Content:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.Wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.Wrapper>div {
+    height: 100%;
+}
+
+.Right {
+    background-color: beige;
+    overflow: auto;
+    height: 900vh;
+    /* background-image: url("https://i.imgur.com/1PGOxV4l.jpg") cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; */
+    background-color: rgb(32, 32, 32);
+    background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+    background-size: 10px 10px, 10px 10px, 10px 5px;
+    background-position: 0px 0px, 5px 5px, 0px 0px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.Left {
+    /* background: linear-gradient(90deg, rgb(209, 55, 41) 0%, rgb(196, 80, 80) 35%, rgb(228, 163, 163) 100%); */
+    float: left;
+    /* margin-left: 10px; */
+    width: 20%;
+    align-content: center;
+    background-color: red;
+    background-image: linear-gradient(45deg, red 25%, transparent 25%, transparent 75%, red 75%, red), linear-gradient(45deg, red 25%, transparent 25%, transparent 75%, red 75%, red), linear-gradient(to bottom, rgb(107, 105, 105), rgb(128, 120, 120));
+    background-size: 10px 10px, 10px 10px, 10px 5px;
+    background-position: 0px 0px, 5px 5px, 0px 0px;
+}
+
+.circleBase {
     border-radius: 50%;
-    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
+    behavior: url(PIE.htc);
+    /* remove if you don't care about IE8 */
     /* width: 100px;
     height: 100px; */
-    background: url('profilepicksmall.jpg');
+    background: url('https://i.imgur.com/F3NzuW5m.jpg');
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     background-size: 220px;
     background-position-y: 0pt;
-    
-    margin-top: 50%;
+    margin-top: 40%;
+    margin-left: 15%;
     border: none;
     /* top: 5%;
     left: 25%; */
@@ -49,21 +88,22 @@ align-items: center;
 
 .pages {
     font-size: 20pt;
-    color: rgb(177, 226, 113);
-    /* font-family: 'Lucida Sans'; */
-    
-    /* text-align: left */
-    /* height: 75px; */
-    /* background-color: white; */
+    color: rgb(0, 0, 0);
+    text-align: inherit;
 }
 
-/* .icons {
-    height: 75px;
-} */
+.pages:hover {
+    color: yellow;
+}
 
-/* .second-div::after {
-    display: table-column;
-    margin-left: 515px;
-    vertical-align: right;
+.page {
+    /* align-content: center; */
+    text-align: center;
+    font-weight: bold;
+}
 
-  } */
+body {
+    background-image: url("https://i.imgur.com/CzpZXih.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
